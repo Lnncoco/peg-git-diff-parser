@@ -1,0 +1,47 @@
+diff --git a/src/diff_data.txt b/src/diff_data.txt
+index 0489b83..e86020d 100644
+--- a/src/diff_data.txt
++++ b/src/diff_data.txt
+@@ -1,28 +1,21 @@
+ diff --git a/package.json b/package.json
+-index 37b3462..9890162 100644
++index cb2f4bc..35455a2 100644
+ --- a/package.json
+ +++ b/package.json
+-@@ -1,6 +1,6 @@
++@@ -1,13 +1,14 @@
+  {
+-   "name": "handyman",
+--  "description": "方便处理项目的辅助工具",
+-+  "description": "处理项目的辅助工具",
+-   "version": "1.1.0",
+-   "main": "./dist/index.js",
+-   "bin": {
+-@@ -11,13 +11,14 @@
+-     "build": "rimraf dist && tsc -p tsconfig.json",
+-     "prepublishOnly": "npm run build",
+-     "test": "ts-node index.ts update prerelease",
+--    "check": "ts-node index.ts check"
+-+    "check": "ts-node version.ts check"
++   "name": "peg-git-diff-parser",
++-  "version": "1.0.0",
+++  "version": "1.0.1",
++   "description": "git diff 文本解析器",
++-  "main": "index.js",
+++  "main": "src/index.js",
++   "scripts": {
++     "build": "peggy -o dist/gitDiffParset.js src/gitDiffParset.peggy",
++     "test": "node src/index.js"
+    },
+    "author": "LnnCoCo",
+++  "new": "new",
+    "license": "ISC",
+    "dependencies": {
+-     "axios": "^0.21.4",
+-     "commander": "^8.2.0",
+-+    "pegjs": "^0.10.0",
+-     "simple-git": "^2.46.0",
+-     "write-json": "^3.0.1"
+-   },
+\ No newline at end of file
++     "peggy": "^1.2.0"

@@ -1,0 +1,22 @@
+diff --git a/src/views/login/index.vue b/src/views/login/index.vue
+index 034306f..44d19bc 100644
+--- a/src/views/login/index.vue
++++ b/src/views/login/index.vue
+@@ -22,7 +22,7 @@
+             :model="loginForm"
+             hide-required-asterisk
+           >
+-            <el-form-item label="用户名" prop="username">
++            <el-form-item label="用户名2" prop="username">
+               <el-input
+                 ref="username"
+                 v-model.trim="loginForm.username"
+@@ -66,7 +66,7 @@
+                 class="login-icon"
+               />
+             </el-form-item>
+-            <el-form-item label="验证码" prop="captcha">
++            <el-form-item label="验证码2" prop="captcha">
+               <el-input
+                 ref="captcha"
+                 v-model="loginForm.captcha"

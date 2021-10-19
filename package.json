@@ -1,0 +1,21 @@
+{
+  "name": "peg-git-diff-parser",
+  "version": "1.0.0",
+  "description": "git diff 文本解析器",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf dist/gitDiffParser.js && peggy -o dist/gitDiffParser.js src/gitDiffParser.peggy",
+    "test:src": "node src/index.js",
+    "test:dist": "node dist/index.js"
+  },
+  "author": "LnnCoCo",
+  "license": "ISC",
+  "dependencies": {
+    "peggy": "^1.2.0",
+    "rimraf": "^3.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lnncoco/peg-git-diff-parser.git"
+  }
+}
